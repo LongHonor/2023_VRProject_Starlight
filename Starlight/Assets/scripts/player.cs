@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    public float speed = 10.0f;
-    public float gravity = -20f;
-
-    public float yVelocity = 0;
+    public float speed;
+    public float yVelocity;
+    public float gravity;
 
     public Transform cameraTransform;
     public CharacterController characterController;
@@ -16,7 +15,9 @@ public class player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        speed = 10.0f;
+        gravity = -20f;
+        yVelocity = 0;
     }
 
     // Update is called once per frame
