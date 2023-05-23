@@ -38,8 +38,6 @@ public class firstPersonCam : MonoBehaviour
         // 이동 방향 벡터를 정규화하여 거리에 이동 속도를 곱한 값을 이동 벡터로 설정합니다.
         Vector3 movement = moveDirection.normalized * moveSpeed * Time.deltaTime;
 
-        // 오브젝트의 위치를 이동 벡터만큼 이동시킵니다.
-        transform.position += movement;
     }
 
 }
