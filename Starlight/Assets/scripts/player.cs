@@ -37,7 +37,7 @@ public class player : MonoBehaviour
 
         moveDirection *= speed;
 
-        yVelocity += (gravity * Time.deltaTime);
+        //yVelocity += (gravity * Time.deltaTime);
 
         moveDirection.y = yVelocity;
 
