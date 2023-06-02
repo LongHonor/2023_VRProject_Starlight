@@ -15,5 +15,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (!isGameOver) Debug.Log(isGameOver);
+        //isGameOver = 미니어쳐매니저의 게임오버 신호를 전달하는 함수
     }
 }
