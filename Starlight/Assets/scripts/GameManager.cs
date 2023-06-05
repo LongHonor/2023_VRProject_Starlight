@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isGameOver) Debug.Log(isGameOver);
+        //if (!isGameOver) Debug.Log(isGameOver);
         //isGameOver = 미니어쳐매니저의 게임오버 신호를 전달하는 함수
         
     }
