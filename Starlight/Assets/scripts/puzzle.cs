@@ -36,11 +36,5 @@ public class puzzle : MonoBehaviour
     public void OpenDrawer()
     {
         drawerTop.GetComponent<Transform>().Translate(0, 0, 0.8f);
-        ChangeMiniatureStatus();
-    }
-
-    private void ChangeMiniatureStatus()
-    {
-        transform.Find("miniature3").GetComponent<Rigidbody>().isKinematic = false;
     }
 }
