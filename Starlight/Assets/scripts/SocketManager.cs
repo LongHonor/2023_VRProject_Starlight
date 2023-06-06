@@ -9,6 +9,7 @@ public class SocketManager : MonoBehaviour
     private bool blueFlag;
     private bool redFlag;
     private bool yellowFlag;
+    private bool drawerFlag;
 
     public GameObject green;
 
@@ -64,5 +65,19 @@ public class SocketManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void CheckFlags()
+    {
+        if(yellowFlag && blueFlag)
+        {
+            puzzle.Instance.OpenDrawer();
+            drawerFlag = true;
+        }
+    }
+
+    public void Update()
+    {
+        if(!drawerFlag) CheckFlags();
     }
 }
