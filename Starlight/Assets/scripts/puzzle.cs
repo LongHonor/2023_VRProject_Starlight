@@ -43,6 +43,7 @@ public class puzzle : MonoBehaviour
     }
 
     public void TurnOffLights(GameObject go)
+    //재귀적으로 오브젝트리스트를 탐색하여 조명을 조절하는 함수
     {
         List<GameObject> childObjects = new List<GameObject>();
         go.gameObject.GetChildGameObjects(childObjects);
