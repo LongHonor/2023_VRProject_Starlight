@@ -24,14 +24,14 @@ public class LightOnOff : MonoBehaviour
         }
 
         //노랑색 미니어쳐가 소켓2에 장착된 경우
-        if (socket.name == "miniature2_Socket" && gameObject.CompareTag("yellowlight"))
+        else if (socket.name == "miniature2_Socket" && gameObject.CompareTag("yellowlight"))
         {
             mymat.SetColor("_EmissionColor", OriginalColorYellow);
             SocketManager.Instance.changeState("yellowflag");
         }
 
         //빨강색 미니어쳐가 소켓3에 장착된 경우 
-        if (socket.name == "miniature3_Socket" && gameObject.CompareTag("redlight"))
+        else if (socket.name == "miniature3_Socket" && gameObject.CompareTag("redlight"))
         {
             mymat.SetColor("_EmissionColor", OriginalColorRed);
             SocketManager.Instance.changeState("redflag");
@@ -51,7 +51,7 @@ public class LightOnOff : MonoBehaviour
         }
 
         //노랑색 미니어쳐가 소켓2에 장착된 경우
-        if (socket.name == "miniature2_Socket" && gameObject.CompareTag("yellowlight"))
+        else if (socket.name == "miniature2_Socket" && gameObject.CompareTag("yellowlight"))
         {
             OriginalColorYellow = mymat.GetColor("_EmissionColor");
             mymat.SetColor("_EmissionColor", Color.black);
@@ -59,7 +59,7 @@ public class LightOnOff : MonoBehaviour
         }
 
         //빨강색 미니어쳐가 소켓3에 장착된 경우 
-        if (socket.name == "miniature3_Socket" && gameObject.CompareTag("redlight"))
+        else if (socket.name == "miniature3_Socket" && gameObject.CompareTag("redlight"))
         {
             OriginalColorRed = mymat.GetColor("_EmissionColor");
             mymat.SetColor("_EmissionColor", Color.black);
