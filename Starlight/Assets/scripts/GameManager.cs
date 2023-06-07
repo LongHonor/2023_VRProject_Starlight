@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private bool isGameOver;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +18,25 @@ public class GameManager : MonoBehaviour
         //if (!isGameOver) Debug.Log(isGameOver);
         if (!isGameOver)
         {
-            isGameOver = SocketManager.Instance.GreenMatChange();
+            isGameOver = gameOver();
         }
         else
         {
 
         }
+    }
+
+    private bool gameOver()
+    {
+        if (SocketManager.Instance.GreenMatChange())
+        //if(true)
+        {
+            player.transform.localPosition = Vector3.zero;
+            player.transform.position = new Vector3(-150, 73, 200);
+            player.transform.rotation = Quaternion.Euler(0, 0, 0);
+            player.transform.rotation = Quaternion.Euler(0, -45f, 0);
+            return true;
+        }
+        return false;
     }
 }
