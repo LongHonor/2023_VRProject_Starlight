@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject uiManagerObject;
+    private UIActiveManager uiManager;
     private bool isGameOver;
+    private bool goToOutdoorFlag = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        uiManager = uiManagerObject.GetComponent<UIActiveManager>();
         isGameOver = false;
     }
 
@@ -21,7 +26,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-
+            if (!goToOutdoorFlag)
+            {
+                goToOutdoorFlag = true;
+                uiManager.SetCurrentUiCanvas(UiCanvas.GoToOutdoorCanvas);
+            }
         }
     }
 }
