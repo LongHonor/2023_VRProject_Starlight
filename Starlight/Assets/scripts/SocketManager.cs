@@ -43,6 +43,7 @@ public class SocketManager : MonoBehaviour
         redFlag = false;
         blueFlag = false;
         yellowFlag = false;
+        drawerFlag = false;
     }
 
     public void changeState(string name)
@@ -69,6 +70,7 @@ public class SocketManager : MonoBehaviour
 
     public void CheckFlags()
     {
+        Debug.Log("yellow" + yellowFlag + " " + "blue" + blueFlag);
         if(yellowFlag && blueFlag)
         {
             puzzle.Instance.OpenDrawer();
