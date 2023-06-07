@@ -12,6 +12,7 @@ public class SocketManager : MonoBehaviour
     private bool drawerFlag;
 
     public GameObject green;
+    public AudioSource drawAudio;
 
     private void Awake()
     {
@@ -74,6 +75,7 @@ public class SocketManager : MonoBehaviour
         if(yellowFlag && blueFlag)
         {
             puzzle.Instance.OpenDrawer();
+            drawAudio.Play();
             drawerFlag = true;
         }
     }

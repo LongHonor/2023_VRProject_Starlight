@@ -10,6 +10,7 @@ public class UIActiveManager : MonoBehaviour
     public GameObject mainCanvas;
     public GameObject descriptionCanvas;
     public GameObject volumeControlCanvas;
+    public GameObject goToOutdoorCanvas;
 
     private UiCanvas currentCanvas;
 
@@ -39,6 +40,10 @@ public class UIActiveManager : MonoBehaviour
         {
             volumeControlCanvas.SetActive(true);
         }
+        else if (currentCanvas == UiCanvas.GoToOutdoorCanvas)
+        {
+            goToOutdoorCanvas.SetActive(true);
+        }
     }
 
     public void InactiveAllUiCanvas()
@@ -46,6 +51,7 @@ public class UIActiveManager : MonoBehaviour
         mainCanvas.SetActive(false);
         descriptionCanvas.SetActive(false);
         volumeControlCanvas.SetActive(false);
+        goToOutdoorCanvas.SetActive(false);
     }
 }
 
@@ -54,4 +60,5 @@ public enum UiCanvas
     MainCanvas,
     DescriptionCanvas,
     VolumeControlCanvas,
+    GoToOutdoorCanvas
 }
