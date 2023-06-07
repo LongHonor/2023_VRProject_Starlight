@@ -7,8 +7,12 @@ public class GameManager : MonoBehaviour
     public GameObject uiManagerObject;
     private UIActiveManager uiManager;
     private bool isGameOver;
+<<<<<<< HEAD
+    public GameObject player;
+=======
     private bool goToOutdoorFlag = false;
 
+>>>>>>> bfcd0fdd24fc63d9c80e63ef6f5144ac48425433
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +26,7 @@ public class GameManager : MonoBehaviour
         //if (!isGameOver) Debug.Log(isGameOver);
         if (!isGameOver)
         {
-            isGameOver = SocketManager.Instance.GreenMatChange();
+            isGameOver = gameOver();
         }
         else
         {
@@ -30,7 +34,8 @@ public class GameManager : MonoBehaviour
             {
                 goToOutdoorFlag = true;
                 uiManager.SetCurrentUiCanvas(UiCanvas.GoToOutdoorCanvas);
-            }
         }
+        return false;
     }
+}
 }
